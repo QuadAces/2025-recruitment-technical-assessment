@@ -85,6 +85,7 @@ app.post("/entry", (req: Request, res: Response) => {
         ) {
             return res.status(400).send("");
         }
+        
         if (req.body.type === "recipe" && req.body.requiredItems) {
             for (const item of req.body.requiredItems) {
                 if (typeof item.name !== "string") {
@@ -119,10 +120,12 @@ app.get("/summary", (req: Request, res: Request) => {
     if (!recipeName) {
         return res.status(400).send("");
     }
+
     fs.readFile("./Cookbook.json", (err, data) => {
         if (err) {
             return res.status(400).send("");
         }
+
         const cookBook = JSON.parse(data.toString());
 
         let recipe;
@@ -131,12 +134,12 @@ app.get("/summary", (req: Request, res: Request) => {
                 recipe = entry;
             }
         }
+
         if (!recipe || recipe.type !== "recipe") {
             return res.status(400).send("");
         }
 
         const summary = getRecipeInfo(recipeName, cookBook);
-        
         if (!summary) {
             return res.status(400).send("");
         }
