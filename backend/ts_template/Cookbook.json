@@ -1,1 +1,1 @@
-[{"type":"ingredient","name":"Egg","cookTime":6},{"type":"ingredient","name":"Lettuce","cookTime":1},{"type":"recipe","name":"Meatball","requiredItems":[{"name":"Beef","quantity":1}]},{"type":"ingredient","name":"Beef","cookTime":10},{"type":"ingredient","name":"beef","cookTime":2},{"type":"recipe","name":"Cheese","requiredItems":[{"name":"Not Real","quantity":1}]},{"type":"recipe","name":"Skibidi","requiredItems":[{"name":"Bruh","quantity":1}]},{"type":"ingredient","name":"Bruh","cookTime":2}]
+[]
